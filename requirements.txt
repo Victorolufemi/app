@@ -1,12 +1,6 @@
 numpy==1.23.5
 nltk==3.8.1
-keras==2.10.0
 pydantic==1.10.7
 fastapi==0.95.2
-tensorflow
-<<<<<<< HEAD
+tensorflow-cpu
 uvicorn==0.22.0
-=======
-uvicorn==0.22.0
-cuda-python
->>>>>>> 0e0cda22319445670b880809d4d0b650c77a0222
