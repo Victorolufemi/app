@@ -3,6 +3,6 @@ nltk==3.8.1
 keras==2.10.0
 pydantic==1.10.7
 fastapi==0.95.2
-tensorflow==2.10.0
+tensorflow
 uvicorn==0.22.0
 cuda-python
