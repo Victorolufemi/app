@@ -13,17 +13,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
-origins = [
-    "http://localhost:3000",
-    "https://fecommerce.vercel.app/",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["POST", "GET"],
-		allow_headers=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 class ChatRequest(BaseModel):
     message: str
