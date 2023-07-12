@@ -9,9 +9,21 @@ from nltk.stem import WordNetLemmatizer
 nltk.download('punkt')
 nltk.download('wordnet')
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
+origins = [
+    "fecommerce.vercel.app",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["POST", "GET"],
+		allow_headers=["*"],
+)
 class ChatRequest(BaseModel):
     message: str
 
