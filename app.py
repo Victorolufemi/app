@@ -28,7 +28,7 @@ class ChatResponse(BaseModel):
 lemmatizer = WordNetLemmatizer()
   
 # loading the files we made previously
-intents = json.loads(open("intents.json").read())
+intents = json.loads(open("intent_file.json").read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbotmodel.h5')
